@@ -4,6 +4,8 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_APP_FIREBASE_API_KEY,
     authDomain: import.meta.env.VITE_APP_FIREBASE_AUTH_DOMAIN,
@@ -11,7 +13,8 @@ const firebaseConfig = {
     storageBucket: import.meta.env.VITE_APP_FIREBASE_STORAGE_BUCKET,
     messagingSenderId: import.meta.env.VITE_APP_FIREBASE_MESSAGING_SENDER_ID,
     appId: import.meta.env.VITE_APP_FIREBASE_APP_ID,
-    databaseURL: import.meta.env.VITE_APP_FIREBASE_DATABASE_URL
+    // databaseURL: import.meta.env.VITE_APP_FIREBASE_DATABASE_URL
+    databaseURL: 
 };
 
 // Initialize Firebase
