@@ -13,8 +13,8 @@ const Register = () => {
     }
     // email handle krna hai
     return (
-        <VStack>
-            <h1>Login</h1>
+        <VStack w="50%" margin="auto">
+            <h1>Register</h1>
             <Input type='text' value={email} placeholder='Email' onSubmit={(e) => setEmail(e.target.value)} />
             <Input type='password' value={password} placeholder='Password' onSubmit={(e) => setPassword(e.target.value)} />
             <Button onClick={handleRegister}>Register</Button>

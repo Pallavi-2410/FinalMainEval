@@ -13,11 +13,14 @@ const Login = () => {
     }
     // email handle krna hai
     return (
-        <VStack>
+        <VStack w="50%" margin="auto">
             <h1>Login</h1>
             <Input type='text' value={email} placeholder='Email' onSubmit={(e) => setEmail(e.target.value)}/>
             <Input type='password' value={password} placeholder='Password' onSubmit={(e) => setPassword(e.target.value)}/>
             <Button onClick={handleLogin}>Login</Button>
+
+
+            
         </VStack>
     )
 }

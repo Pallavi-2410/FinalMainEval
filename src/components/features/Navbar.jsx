@@ -10,7 +10,7 @@ const Navbar = () => {
     
     return (
         <HStack display="flex" justifyContent="space-between" p={3} m={3} bg="gray.500" color="white">
-            <Link to="./">My Library</Link>
+            <Link to="/">My Library</Link>
             <HStack>
                 <Link to="/home">Home</Link>
                 <Link to="/login">Login</Link>
