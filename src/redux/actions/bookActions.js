@@ -20,3 +20,55 @@ export const fetchBooks = () => async (dispatch) => {
         console.error("Unable to fetch books", error)
     }
 }
+
+export const fetchMyBook = () => async (dispatch) => {
+    try {
+        const response = await axios.get(`https://main-eval-project-default-rtdb.firebaseio.com/users/{userId}/myBooks.json`);
+        const userBook = response.data;
+
+        console.log(userBook, "books get");
+
+        dispatch({ type: FETCH_MY_BOOKS, payload: booksData })
+    } catch (error) {
+        console.error("Unable to fetch books", error)
+    }
+}
+
+export const addToMybook = () => async (dispatch) => {
+    try {
+        const response = await axios.put(`https://main-eval-project-default-rtdb.firebaseio.com/users/{userId}/myBooks/{bookId}.json`);
+        const addmyBook = response.data;
+
+        console.log(addmyBook, "books get");
+
+        dispatch({ type: ADD_BOOK_TO_USER_LIST, payload: booksData })
+    } catch (error) {
+        console.error("Unable to fetch books", error)
+    }
+}
+
+export const updateBookStatus = () => async (dispatch) => {
+    try {
+        const response = await axios.patch(`https://main-eval-project-default-rtdb.firebaseio.com/users/{userId}/myBooks/{bookId}.json`);
+        const addmyBook = response.data;
+
+        console.log(addmyBook, "books get");
+
+        dispatch({ type: UPDATE_BOOK_STATUS, payload: bookId, status })
+    } catch (error) {
+        console.error("Unable to fetch books", error)
+    }
+}
+
+export const updateBookRating = () => async (dispatch) => {
+    try {
+        const response = await axios.patch(`https://main-eval-project-default-rtdb.firebaseio.com/users/{userId}/myBooks/{bookId}.json`);
+        const addmyBook = response.data;
+
+        console.log(addmyBook, "books get");
+
+        dispatch({ type: UPDATE_BOOK_RATING, payload: bookId, rating })
+    } catch (error) {
+        console.error("Unable to fetch books", error)
+    }
+}
