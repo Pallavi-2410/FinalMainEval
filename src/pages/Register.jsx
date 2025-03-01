@@ -7,7 +7,7 @@ const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const user = useSelector((state) => state.auth.user)
+    // const user = useSelector((state) => state.auth.user)
     const dispatch = useDispatch()
     const handleRegister = () => {
         dispatch(login(email, password));
