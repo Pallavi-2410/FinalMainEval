@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, HStack } from '@chakra-ui/react'
+import { Button, HStack, Text } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import Home from '@/pages/Home'
 import { useDispatch, useSelector } from 'react-redux'
@@ -13,7 +13,11 @@ const Navbar = () => {
             <Link to="/">My Library</Link>
             <HStack>
                 <Link to="/home">Home</Link>
-                <Link to="/login">Login</Link>
+
+                
+            { user? (<Link to="/login">Login</Link>) : (<Link to = "/logout">Logout</Link>)}
+
+                
                 <Link to="/register">Register</Link>
             </HStack>
         </HStack>
